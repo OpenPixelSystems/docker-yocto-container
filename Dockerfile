@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:xenial
 
 RUN apt-get update -y
 
@@ -45,3 +45,9 @@ RUN sudo update-alternatives --install /usr/local/bin/python python \
 
 RUN sudo update-alternatives --install /usr/local/bin/python python \
 	/usr/bin/python3 3
+
+ENV LAN en_US.UFT-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+RUN mkdir mnt
